@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import FishList from '../components/fish/FishList';
-import FishAvailabilityDetails from '../components/fish/FishAvailabilityDetails';
 
 const FishContainer = () => {
 
   const [fish, setFish] = useState([])
+  const [availabilityDetails, setAvailabilityDetails] = useState(false)
+  const [selectedFish, setSelectedFish] = useState(null)
     
   useEffect(() => {
     getFish();
-  
   }, []);
   
   const getFish = function(){
@@ -18,12 +18,18 @@ const FishContainer = () => {
   };
 
   const showAvailabilityDetails = function(fishItem) {
-    
+    setSelectedFish(fishItem);
+    setAvailabilityDetails(true);
   }
 
   return (
     <>
-    <FishList fish={fish} showAvailabilityDetails={showAvailabilityDetails}/>
+    <FishList 
+    fish={fish}
+    selectedFish={selectedFish}
+    availabilityDetails={availabilityDetails}
+
+    showAvailabilityDetails={showAvailabilityDetails}/>
     </>
   );
 };

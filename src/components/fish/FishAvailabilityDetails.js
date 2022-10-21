@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const FishAvailabilityDetails = () => {
+const FishAvailabilityDetails = ({ selectedFish }) => {
   return (
-    <div>FishAvailabilityDetails</div>
-  )
-}
+    <div>{selectedFish[1]["availability"]["location"]}</div>
+  );
+};
 
-export default FishAvailabilityDetails
+export default FishAvailabilityDetails;
