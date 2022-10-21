@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NavBar = ( {fish} ) => {
   return (
     <>
-    <ul>
+    <ul className="nav-bar">
         <li>
             <Link to="/">Home</Link>
         </li>

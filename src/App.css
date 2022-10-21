@@ -9,5 +9,16 @@ body {
   object-fit: contain;
 }
 
+.nav-bar {
+  display: flex;
+  background-color:teal;
+  margin: 0;
+  padding: 16px;
+}
+
+.nav-bar li {
+  color: white;
+}
+
 
 

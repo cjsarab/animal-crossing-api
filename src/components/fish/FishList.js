@@ -26,7 +26,7 @@ const FishList = ({
   const FishItemsList = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   background-color: transparent;
   list-style: none;
   `
