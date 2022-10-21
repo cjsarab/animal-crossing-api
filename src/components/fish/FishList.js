@@ -1,6 +1,8 @@
 import React from 'react';
 import FishItem from './FishItem';
 
+import styled from 'styled-components';
+
 const FishList = ({ 
   fish,
   selectedFish,
@@ -9,7 +11,7 @@ const FishList = ({
   }) => {
 
   const fishToMap = Object.entries(fish);
-  
+
   const fishItems = fishToMap.map((fishItem, index) => {
     return <FishItem
     fishItem={fishItem} 
@@ -21,11 +23,16 @@ const FishList = ({
     />
   });
 
+  const FishItemsList = styled.ul`
+  background-color: transparent;
+  list-style: none;
+  `
+
   return (
     <>
-    <ul>
+    <FishItemsList>
         {fishItems}
-    </ul>
+    </FishItemsList>
     </>
   );
 };
