@@ -7,7 +7,7 @@ const FishList = ({
   fish,
   selectedFish,
   availabilityDetails, 
-  showAvailabilityDetails
+  showDetails
   }) => {
 
   const fishToMap = Object.entries(fish);
@@ -19,11 +19,14 @@ const FishList = ({
     
     selectedFish={selectedFish}
     availabilityDetails={availabilityDetails} 
-    showAvailabilityDetails={showAvailabilityDetails} 
+    showDetails={showDetails} 
     />
   });
 
   const FishItemsList = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   background-color: transparent;
   list-style: none;
   `

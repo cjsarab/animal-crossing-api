@@ -18,7 +18,7 @@ const FishContainer = () => {
       .then(fish => setFish(fish))
   };
 
-  const showAvailabilityDetails = function(fishItem) {
+  const showDetails = function(fishItem) {
     setSelectedFish(fishItem);
     setAvailabilityDetails(true);
   }
@@ -46,7 +46,7 @@ const FishContainer = () => {
     selectedFish={selectedFish}
     availabilityDetails={availabilityDetails}
 
-    showAvailabilityDetails={showAvailabilityDetails}/>
+    showDetails={showDetails}/>
     </>
   );
 };

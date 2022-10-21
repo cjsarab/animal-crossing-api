@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FishAvailabilityDetails = ({ selectedFish, fishItem }) => { 
+const FishDetails = ({ selectedFish, fishItem }) => { 
 
     const availability = selectedFish[1]["availability"]
 
@@ -30,4 +30,4 @@ const FishAvailabilityDetails = ({ selectedFish, fishItem }) => {
   );
 };
 
-export default FishAvailabilityDetails;
+export default FishDetails;
