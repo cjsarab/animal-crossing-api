@@ -25,8 +25,14 @@ const FishItem = ({
     />
 
     {
-    availabilityDetails ? 
-    <FishAvailabilityDetails 
+      //This code checks that selected fish
+      //is the only one to show it's availability details
+    availabilityDetails && 
+    fishItem[1]["file-name"] == 
+    selectedFish[1]["file-name"] 
+    ? 
+    <FishAvailabilityDetails
+    fishItem={fishItem} 
     selectedFish={selectedFish}
     /> : null }
 

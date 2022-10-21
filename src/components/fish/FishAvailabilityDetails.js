@@ -1,6 +1,7 @@
 import React from 'react';
 
-const FishAvailabilityDetails = ({ selectedFish }) => {
+const FishAvailabilityDetails = ({ selectedFish, fishItem }) => {
+    
   return (
     <div>{selectedFish[1]["availability"]["location"]}</div>
   );
